@@ -11,10 +11,10 @@ index.rpt is the output file name. (The input files are ASCII format.)
 Output the total cache miss count into the output file, i.e. index.rpt.
 
 ### How does it works ?
-we consider byte addresses and byte addressable cache systems.
+We consider byte addresses and byte addressable cache systems.
 Give a cache with the M-bit address bits, B-byte block size, E cache sets, and using
-A-way set associativity. There are $O = log2$ B bits offset, and we need to select 
-$ 𝐾 = log2 $ E bits among upper $(M-O)$ address bits for indexing the cache. There are totally $ \binom {M-O}K$  possible valid indexing schemes. 
+A-way set associativity. There are O = log2 B bits offset, and we need to select 
+𝐾 = log2 E bits among upper (M-O) address bits for indexing the cache. There are totally \binom {M-O}{K}  possible valid indexing schemes. 
 We done two tghings:
  (i) implement the NRU replacement policy and the LSB indexing scheme and 
  (ii) find a valid indexing scheme with minimal cache misses
